@@ -1,0 +1,37 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo %} Principal {% endblock %}
+{% block imagen %} 
+	{%load static%}
+	{%static 'inicio/images/contacto.png'%}
+{% endblock %}
+{% block imagen-texto %} 
+	<div class="user-info">
+		Consulta Comentarios <span>DSM</span>
+	</div>
+{% endblock %}
+{% block titulo2 %}Comentarios {% endblock %}
+{% block titulo3 %}Lista de comentarios {% endblock %}
+{% block contenido %}	
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Usuario</th>
+				<th>Mensaje</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for comentario in comentariosContacto %}
+			<tr>
+				<td>{{comentario.usuario}}</td>
+				<td>{{comentario.mensaje}}</td>
+				<td><a href="editar">Editar</a></td>
+				<td class="text-center">
+					<a href="{%url 'Eliminar' comentario.id%}">Eliminar</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody> 
+{% endblock %}
+ 

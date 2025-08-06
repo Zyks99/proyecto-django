@@ -6,7 +6,7 @@
 {% endblock %}
 {% block imagen-texto %} 
 	<div class="user-info">
-		Principal <span>DSM</span>
+		Principal Pagina <span>DSM</span>
 	</div>
 {% endblock %}
 {% block titulo2 %}Principal {% endblock %}
@@ -26,7 +26,7 @@
 			{% for alumno in alumnos %}
 			<tr>
 				<td class="text-center">
-					<img src="{{alumno.imagen.url}}" alt="" class="img-media">
+					<img src="{{alumno.image.url}}" alt="" class="img-media">
 				</td>
 				<td class="text-semibold">{{alumno.matricula}}</td>
 				<td class="muted">{{alumno.nombre}}</td>

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'inicio',
-    'registros.apps.RegistrosConfig'
+    'registros.apps.RegistrosConfig',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'prueba',
+        'USER':'Alumno',
+        'PASSWORD':'1234',
+        'HOST':'localhost',
+        'PORT':'3306',
+    }
+}'''
+
 
 
 # Password validation
@@ -127,3 +140,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+
+#ckeditor
+
+CKEDITOR_CONFIGS ={
+    'default':{
+        'toolbar':'Basic',
+    }
+}
